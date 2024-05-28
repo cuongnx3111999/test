@@ -1,0 +1,25 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (05-SceneManager.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Animation.cpp
+  Animations.cpp
+  Brick.cpp
+  Coin.cpp
+  Collision.cpp
+  debug.cpp
+  Game.cpp
+  GameObject.cpp
+  Goomba.cpp
+  main.cpp
+  Mario.cpp
+  Platform.cpp
+  PlayScene.cpp
+  Portal.cpp
+D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\PlayScene.cpp(80,20): warning C4018: '<': signed/unsigned mismatch
+D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\PlayScene.cpp(270,20): warning C4018: '<': signed/unsigned mismatch
+D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\PlayScene.cpp(295,20): warning C4018: '<': signed/unsigned mismatch
+  SampleKeyEventHandler.cpp
+  Sprite.cpp
+  Sprites.cpp
+  Textures.cpp
+  Utils.cpp
+  Generating Code...
+  05-SceneManager.vcxproj -> D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\Debug\Project1.exe
