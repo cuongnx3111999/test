@@ -1,0 +1,189 @@
+# list of object assets to load in this scene
+[ASSETS]
+mario.txt
+brick.txt
+coin.txt
+goomba.txt
+ground.txt
+mysterybox.txt
+bush.txt
+tree1.txt
+tree2.txt
+tree3.txt
+tree4.txt
+warppipe.txt
+cloud.txt
+stair0.txt
+stair1.txt
+stair2.txt
+stair3.txt
+stair4.txt
+stair5.txt
+stair6.txt
+stair7.txt
+stair8.txt
+stair9.txt
+wood.txt
+pipebelow.txt
+pipeabove.txt
+blackbackground.txt
+
+#
+[OBJECTS]
+# type	x	y	extra_settings per object type
+# type: 0 = Mario , 1 = Brick, 2 = Goomba, 3 = Koopas, 4 = Coin, 5 = Platform, 6 = Ground
+#	7 = MysteryBox, 8 = Bush, 9 = Tree1, 10 = Tree2, 11 = Tree3, 12 = Tree4, 13 = Cloud 
+#	20 = Stair0, 21 = Stair1, ... , 29 = Stair9.
+# 	30 = Wood, 31 = PipeBelow, 32 = PipeAbove, 33 = WarpPipe, 40 = BlackBackground.      
+# See OBJECT_TYPE constants in AssetIDs.h
+
+
+#Cloud
+13	140	60
+13	355	50
+13	686	60
+13	790	85
+13	2380	60
+
+#Bush
+8	173	181
+8	190	181
+8	207	181
+
+8	712	165
+8	728	165
+8	744	165
+8	760	165
+8	776	165
+8	792	165
+
+8	1076	165
+8	1092	165
+
+8	1224	181
+8	1240	181
+8	1256	181
+
+8	1768	181
+8	1784	181
+8	1800	181
+
+#Tree
+9	80	157
+10	911	141
+11	1005	149
+11	1952	165
+12	2450	125
+
+#BlackBackground
+40	2682	-20
+
+# MARIO
+0	20	10
+
+#WarpPipe
+33	390	164
+33	1840	180
+33	1904	164
+33	2370	180
+
+# GROUND
+#	start(x,y)	width	height	number of blocks	
+6	8	196	16	15	41	61000	62000	63000
+6	664	196	16	15	29	61000	62000	63000
+6	664	180	16	15	29	61000	62000	63000
+6	1192	196	16	15	22	61000	62000	63000
+6	1576	196	16	15	5	61000	62000	63000
+6	1704	196	16	15	36	61000	62000	63000
+6	2296	196	16	15	44	61000	62000	63000
+
+#Mystery Box
+7	190 	130
+7	206 	130
+
+7	240 	80
+7	256 	80
+
+7	696	164
+7	744	132
+
+7	1509 	152
+
+#Goomba
+2	300	10
+
+#Stairs
+21	304	148
+20	272	164
+
+25	568	132
+23	518	148
+22	464	164
+24	582	172
+
+28	1414	140
+27	1382	156
+26	1350	172
+
+29	2232	116
+20	2200	164
+
+#Wood
+30	1544	122
+30	1560	122
+
+30	1608	180
+30	1624	180
+30	1640	180
+30	1624	164
+30	1640	164
+30	1640	148
+
+30	1704	180
+30	1720	180
+30	1736	180
+30	1704	164
+30	1720	164
+30	1704	148
+
+30	2298	150
+30	2314	150
+30	2298	94
+30	2314	94
+
+#Brick
+1	1992	180
+1	2008	180
+1	2024	180
+1	2040	180
+1	2056	180
+1	2072	180
+1	2088	180
+1	2008	164
+1	2024	164
+1	2040	164
+1	2056	164
+1	2072	164
+1	2024	148
+1	2040	148
+1	2056	148
+1	2072	148
+
+1	2136	180
+1	2152	180
+1	2136	164
+
+#Pipe
+31	2306	173
+32	2306	-22
+
+
+
+
+
+
+
+
+
+
+

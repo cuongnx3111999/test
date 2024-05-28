@@ -4,14 +4,14 @@
 #include "Animation.h"
 #include "Animations.h"
 
-#define ID_ANI_BUSH 14000
-#define BUSH_WIDTH 16
-#define BUSH_BBOX_WIDTH 16
-#define BUSH_BBOX_HEIGHT 17
+#define ID_ANI_TREE2 16000
+#define TREE2_WIDTH 127
+#define TREE2_BBOX_WIDTH 127
+#define TREE2_BBOX_HEIGHT 65
 
-class CBush : public CGameObject {
+class CTree2 : public CGameObject {
 public:
-	CBush(float x, float y) : CGameObject(x, y) {}
+	CTree2(float x, float y) : CGameObject(x, y) {}
 	void Render();
 	void Update(DWORD dt) {}
 	void GetBoundingBox(float& l, float& t, float& r, float& b);

@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\BackGroundObjects">
+      <UniqueIdentifier>{42dc0c05-51bc-4a90-97c8-778376d08bf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\BackGroundObjects">
+      <UniqueIdentifier>{70000431-756b-45ef-9717-991f31e74370}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Stairs">
+      <UniqueIdentifier>{c56eacbe-7439-47b2-bcea-445c1dab59d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Stairs">
+      <UniqueIdentifier>{3d50892c-57e4-44dd-958e-03a5c3a543d4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -81,14 +93,68 @@
     <ClCompile Include="Ground.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Bush.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="WarpPipe.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Tree.cpp">
+    <ClCompile Include="Tree1.cpp">
+      <Filter>Source Files\BackGroundObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Bush.cpp">
+      <Filter>Source Files\BackGroundObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Tree2.cpp">
+      <Filter>Source Files\BackGroundObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Tree3.cpp">
+      <Filter>Source Files\BackGroundObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Cloud.cpp">
+      <Filter>Source Files\BackGroundObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Stair0.cpp">
+      <Filter>Source Files\Stairs</Filter>
+    </ClCompile>
+    <ClCompile Include="Stair1.cpp">
+      <Filter>Source Files\Stairs</Filter>
+    </ClCompile>
+    <ClCompile Include="Stair2.cpp">
+      <Filter>Source Files\Stairs</Filter>
+    </ClCompile>
+    <ClCompile Include="Stair3.cpp">
+      <Filter>Source Files\Stairs</Filter>
+    </ClCompile>
+    <ClCompile Include="Stair4.cpp">
+      <Filter>Source Files\Stairs</Filter>
+    </ClCompile>
+    <ClCompile Include="Stair5.cpp">
+      <Filter>Source Files\Stairs</Filter>
+    </ClCompile>
+    <ClCompile Include="Stair7.cpp">
+      <Filter>Source Files\Stairs</Filter>
+    </ClCompile>
+    <ClCompile Include="Stair6.cpp">
+      <Filter>Source Files\Stairs</Filter>
+    </ClCompile>
+    <ClCompile Include="Stair8.cpp">
+      <Filter>Source Files\Stairs</Filter>
+    </ClCompile>
+    <ClCompile Include="Stair9.cpp">
+      <Filter>Source Files\Stairs</Filter>
+    </ClCompile>
+    <ClCompile Include="Wood.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PipeBelow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PipeAbove.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tree4.cpp">
+      <Filter>Source Files\BackGroundObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="BlackBackground.cpp">
+      <Filter>Source Files\BackGroundObjects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -170,11 +236,65 @@
     <ClInclude Include="WarpPipe.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Tree.h">
+    <ClInclude Include="Bush.h">
+      <Filter>Header Files\BackGroundObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree1.h">
+      <Filter>Header Files\BackGroundObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Cloud.h">
+      <Filter>Header Files\BackGroundObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree2.h">
+      <Filter>Header Files\BackGroundObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree3.h">
+      <Filter>Header Files\BackGroundObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Stair1.h">
+      <Filter>Header Files\Stairs</Filter>
+    </ClInclude>
+    <ClInclude Include="Stair2.h">
+      <Filter>Header Files\Stairs</Filter>
+    </ClInclude>
+    <ClInclude Include="Stair3.h">
+      <Filter>Header Files\Stairs</Filter>
+    </ClInclude>
+    <ClInclude Include="Stair4.h">
+      <Filter>Header Files\Stairs</Filter>
+    </ClInclude>
+    <ClInclude Include="Stair5.h">
+      <Filter>Header Files\Stairs</Filter>
+    </ClInclude>
+    <ClInclude Include="Stair6.h">
+      <Filter>Header Files\Stairs</Filter>
+    </ClInclude>
+    <ClInclude Include="Stair7.h">
+      <Filter>Header Files\Stairs</Filter>
+    </ClInclude>
+    <ClInclude Include="Stair8.h">
+      <Filter>Header Files\Stairs</Filter>
+    </ClInclude>
+    <ClInclude Include="Stair9.h">
+      <Filter>Header Files\Stairs</Filter>
+    </ClInclude>
+    <ClInclude Include="Stair0.h">
+      <Filter>Header Files\Stairs</Filter>
+    </ClInclude>
+    <ClInclude Include="Wood.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Bush.h">
+    <ClInclude Include="PipeBelow.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PipeAbove.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree4.h">
+      <Filter>Header Files\BackGroundObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="BlackBackground.h">
+      <Filter>Header Files\BackGroundObjects</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

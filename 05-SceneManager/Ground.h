@@ -1,18 +1,33 @@
 #pragma once
 
 #include "GameObject.h"
-#include "Animation.h"
-#include "Animations.h"
 
-#define ID_ANI_GROUND 13000
-#define GROUND_WIDTH 16
-#define GROUND_BBOX_WIDTH 16
-#define GROUND_BBOX_HEIGHT 16
+//
+class CGround : public CGameObject
+{
+protected:
+	int length;
+	float cellWidth;
+	float cellHeight;
+	int spriteIdBegin, spriteIdMiddle, spriteIdEnd;
 
-class CGround : public CGameObject {
 public:
-	CGround(float x, float y) : CGameObject(x, y) {}
+	CGround(float x, float y,
+		float cell_width, float cell_height, int length,
+		int sprite_id_begin, int sprite_id_middle, int sprite_id_end) :CGameObject(x, y)
+	{
+		this->length = length;
+		this->cellWidth = cell_width;
+		this->cellHeight = cell_height;
+		this->spriteIdBegin = sprite_id_begin;
+		this->spriteIdMiddle = sprite_id_middle;
+		this->spriteIdEnd = sprite_id_end;
+	}
+
 	void Render();
 	void Update(DWORD dt) {}
 	void GetBoundingBox(float& l, float& t, float& r, float& b);
+	void RenderBoundingBox();
 };
+
+typedef CGround* PLGROUND;

@@ -4,14 +4,14 @@
 #include "Animation.h"
 #include "Animations.h"
 
-#define ID_ANI_BUSH 14000
-#define BUSH_WIDTH 16
-#define BUSH_BBOX_WIDTH 16
-#define BUSH_BBOX_HEIGHT 17
+#define ID_ANI_STAIR9 29000
+#define STAIR9_WIDTH 48
+#define STAIR9_BBOX_WIDTH 48
+#define STAIR9_BBOX_HEIGHT 144
 
-class CBush : public CGameObject {
+class CStair9 : public CGameObject {
 public:
-	CBush(float x, float y) : CGameObject(x, y) {}
+	CStair9(float x, float y) : CGameObject(x, y) {}
 	void Render();
 	void Update(DWORD dt) {}
 	void GetBoundingBox(float& l, float& t, float& r, float& b);
