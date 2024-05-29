@@ -7,6 +7,8 @@
 #include "Goomba.h"
 #include "Coin.h"
 #include "Portal.h"
+#include "MysteryBox.h"
+#include "MushRoom.h"
 
 #include "Collision.h"
 
@@ -37,6 +39,12 @@ void CMario::OnNoCollision(DWORD dt)
 
 void CMario::OnCollisionWith(LPCOLLISIONEVENT e)
 {
+	if (e->ny < 0 && e->obj->IsStair())
+	{
+		vy = 0;
+		isOnPlatform = true;
+	}
+	else
 	if (e->ny != 0 && e->obj->IsBlocking())
 	{
 		vy = 0;
@@ -54,6 +62,10 @@ void CMario::OnCollisionWith(LPCOLLISIONEVENT e)
 		OnCollisionWithCoin(e);
 	else if (dynamic_cast<CPortal*>(e->obj))
 		OnCollisionWithPortal(e);
+	else if (dynamic_cast<CMysteryBox*>(e->obj))
+		OnCollisionWithMysteryBox(e);
+	else if (dynamic_cast<CMushRoom*>(e->obj))
+		OnCollisionWithMushRoom(e);
 }
 
 void CMario::OnCollisionWithGoomba(LPCOLLISIONEVENT e)
@@ -100,6 +112,24 @@ void CMario::OnCollisionWithPortal(LPCOLLISIONEVENT e)
 {
 	CPortal* p = (CPortal*)e->obj;
 	CGame::GetInstance()->InitiateSwitchScene(p->GetSceneId());
+}
+
+void CMario::OnCollisionWithMysteryBox(LPCOLLISIONEVENT e)
+{
+	CMysteryBox* mysterybox = (CMysteryBox*)(e->obj);
+	if (e->ny > 0 && mysterybox->GetState() == MYSTERYBOX_STATE_FIRST) {
+		mysterybox->SetState(MYSTERYBOX_STATE_TAKEN);
+	}
+}
+
+void CMario::OnCollisionWithMushRoom(LPCOLLISIONEVENT e) 
+{
+	e->obj->Delete();
+	if (level == MARIO_LEVEL_SMALL)
+	{
+		level = MARIO_LEVEL_BIG;
+		StartUntouchable();
+	}
 }
 
 //

@@ -14,6 +14,7 @@
 #include "SampleKeyEventHandler.h"
 
 using namespace std;
+CPlayScene* CPlayScene::__instance = NULL;
 
 CPlayScene::CPlayScene(int id, LPCWSTR filePath):
 	CScene(id, filePath)
@@ -120,7 +121,8 @@ void CPlayScene::_ParseSection_OBJECTS(string line)
 	case OBJECT_TYPE_GOOMBA: obj = new CGoomba(x,y); break;
 	case OBJECT_TYPE_BRICK: obj = new CBrick(x,y); break;
 	case OBJECT_TYPE_COIN: obj = new CCoin(x, y); break;
-	case OBJECT_TYPE_MYSTERYBOX: obj = new CMysteryBox(x, y); break;
+	case OBJECT_TYPE_MYSTERYBOX_COIN: obj = new CMysteryBox(x, y, 1); break;
+	case OBJECT_TYPE_MYSTERYBOX_MUSHROOM: obj = new CMysteryBox(x, y, 2); break;
 	case OBJECT_TYPE_TREE1: obj = new CTree1(x, y); break;
 	case OBJECT_TYPE_TREE2: obj = new CTree2(x, y); break;
 	case OBJECT_TYPE_TREE3: obj = new CTree3(x, y); break;
@@ -142,6 +144,7 @@ void CPlayScene::_ParseSection_OBJECTS(string line)
 	case OBJECT_TYPE_PIPEBELOW: obj = new CPipeBelow(x, y); break;
 	case OBJECT_TYPE_PIPEABOVE: obj = new CPipeAbove(x, y); break;
 	case OBJECT_TYPE_BLACKBACKGROUND: obj = new CBlackBackground(x, y); break;
+	case OBJECT_TYPE_PRIZE: obj = new CPrize(x, y); break;
 
 	case OBJECT_TYPE_PLATFORM:
 	{
@@ -276,16 +279,24 @@ void CPlayScene::Update(DWORD dt)
 {
 	// We know that Mario is the first object in the list hence we won't add him into the colliable object list
 	// TO-DO: This is a "dirty" way, need a more organized way 
-
 	vector<LPGAMEOBJECT> coObjects;
 	for (size_t i = 1; i < objects.size(); i++)
 	{
 		coObjects.push_back(objects[i]);
 	}
 
-	for (size_t i = 0; i < objects.size(); i++)
+	size_t i = 0;
+	while (i < objects.size())
 	{
 		objects[i]->Update(dt, &coObjects);
+		if (objects[i]->CreateSubObject) {
+			CGameObject* obj = NULL;
+			obj = objects[i]->subObject;
+			objects.push_back(obj);
+			Render();
+			objects[i]->CreateSubObject = false;
+		}
+		i++;
 	}
 
 	// skip the rest if scene was already unloaded (Mario::Update might trigger PlayScene::Unload)
@@ -363,4 +374,9 @@ void CPlayScene::PurgeDeletedObjects()
 	objects.erase(
 		std::remove_if(objects.begin(), objects.end(), CPlayScene::IsGameObjectDeleted),
 		objects.end());
+}
+
+void CPlayScene::SpawnGameObject(CGameObject* obj, float x, float y) {
+	obj->SetPosition(x, y);
+	objects.push_back(obj);
 }

@@ -156,6 +156,15 @@
     <ClCompile Include="BlackBackground.cpp">
       <Filter>Source Files\BackGroundObjects</Filter>
     </ClCompile>
+    <ClCompile Include="Prize.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoinFromBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MushRoom.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h">
@@ -295,6 +304,15 @@
     </ClInclude>
     <ClInclude Include="BlackBackground.h">
       <Filter>Header Files\BackGroundObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Prize.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CoinFromBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MushRoom.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

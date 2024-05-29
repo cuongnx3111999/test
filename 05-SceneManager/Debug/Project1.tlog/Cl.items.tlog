@@ -1,19 +1,45 @@
-D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Animation.cpp;D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Debug\Animation.obj
-D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Animations.cpp;D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Debug\Animations.obj
-D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Brick.cpp;D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Debug\Brick.obj
-D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Coin.cpp;D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Debug\Coin.obj
-D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Collision.cpp;D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Debug\Collision.obj
-D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\debug.cpp;D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Debug\debug.obj
-D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Game.cpp;D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Debug\Game.obj
-D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\GameObject.cpp;D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Debug\GameObject.obj
-D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Goomba.cpp;D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Debug\Goomba.obj
-D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\main.cpp;D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Debug\main.obj
-D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Mario.cpp;D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Debug\Mario.obj
-D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Platform.cpp;D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Debug\Platform.obj
-D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\PlayScene.cpp;D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Debug\PlayScene.obj
-D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Portal.cpp;D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Debug\Portal.obj
-D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\SampleKeyEventHandler.cpp;D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Debug\SampleKeyEventHandler.obj
-D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Sprite.cpp;D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Debug\Sprite.obj
-D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Sprites.cpp;D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Debug\Sprites.obj
-D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Textures.cpp;D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Debug\Textures.obj
-D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Utils.cpp;D:\UIT\SE102 - Nhap mon game\PROJECT\SMB3_2251351\05-SceneManager\Debug\Utils.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Animation.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Animation.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Animations.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Animations.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\BlackBackground.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\BlackBackground.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Brick.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Brick.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Bush.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Bush.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Cloud.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Cloud.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Coin.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Coin.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\CoinFromBox.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\CoinFromBox.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Collision.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Collision.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\debug.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\debug.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Game.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Game.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\GameObject.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\GameObject.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Goomba.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Goomba.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Ground.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Ground.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\main.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\main.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Mario.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Mario.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\MushRoom.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\MushRoom.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\MysteryBox.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\MysteryBox.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\PipeAbove.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\PipeAbove.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\PipeBelow.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\PipeBelow.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Platform.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Platform.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\PlayScene.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\PlayScene.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Portal.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Portal.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Prize.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Prize.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\SampleKeyEventHandler.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\SampleKeyEventHandler.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Sprite.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Sprite.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Sprites.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Sprites.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Stair0.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Stair0.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Stair1.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Stair1.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Stair2.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Stair2.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Stair3.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Stair3.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Stair4.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Stair4.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Stair5.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Stair5.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Stair6.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Stair6.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Stair7.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Stair7.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Stair8.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Stair8.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Stair9.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Stair9.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Textures.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Textures.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Tree1.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Tree1.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Tree2.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Tree2.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Tree3.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Tree3.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Tree4.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Tree4.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Utils.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Utils.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\WarpPipe.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\WarpPipe.obj
+F:\hoc\game\New folder\clone\test\05-SceneManager\Wood.cpp;F:\hoc\game\New folder\clone\test\05-SceneManager\Debug\Wood.obj
