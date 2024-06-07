@@ -31,6 +31,10 @@
 #include "Prize.h"
 #include "CoinFromBox.h"
 #include "MushRoom.h"
+#include "Koopas.h"
+#include "WingGoomba.h"
+#include "WingKoopas.h"
+#include "PakkunFlower.h"
 //#include "Koopas.h"
 
 

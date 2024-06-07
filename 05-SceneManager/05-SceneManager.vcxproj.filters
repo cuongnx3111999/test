@@ -165,6 +165,18 @@
     <ClCompile Include="MushRoom.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Koopas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WingGoomba.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WingKoopas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PakkunFlower.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h">
@@ -312,6 +324,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MushRoom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Koopas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WingGoomba.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WingKoopas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PakkunFlower.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

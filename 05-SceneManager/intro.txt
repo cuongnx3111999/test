@@ -1,0 +1,10 @@
+[ASSETS]
+mario.txt
+curtain.txt
+title.txt
+platform.txt
+
+[OBJECTS]
+#Mario
+0	200	0
+

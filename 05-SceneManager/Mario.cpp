@@ -9,6 +9,10 @@
 #include "Portal.h"
 #include "MysteryBox.h"
 #include "MushRoom.h"
+#include "Koopas.h"
+#include "WingGoomba.h"
+#include "WingKoopas.h"
+#include "PakkunFlower.h"
 
 #include "Collision.h"
 
@@ -66,6 +70,10 @@ void CMario::OnCollisionWith(LPCOLLISIONEVENT e)
 		OnCollisionWithMysteryBox(e);
 	else if (dynamic_cast<CMushRoom*>(e->obj))
 		OnCollisionWithMushRoom(e);
+	else if (dynamic_cast<CKoopas*>(e->obj))
+		OnCollisionWithKoopas(e);
+	else if (dynamic_cast<CWingGoomba*>(e->obj))
+		OnCollisionWithWingGoomba(e);
 }
 
 void CMario::OnCollisionWithGoomba(LPCOLLISIONEVENT e)
@@ -127,8 +135,76 @@ void CMario::OnCollisionWithMushRoom(LPCOLLISIONEVENT e)
 	e->obj->Delete();
 	if (level == MARIO_LEVEL_SMALL)
 	{
+		y -= 8;
 		level = MARIO_LEVEL_BIG;
 		StartUntouchable();
+	}
+}
+
+void CMario::OnCollisionWithKoopas(LPCOLLISIONEVENT e)
+{
+	CKoopas* koopas = dynamic_cast<CKoopas*>(e->obj);
+	if (e->ny < 0)
+	{
+		if (koopas->GetState() == KOOPAS_STATE_WALKING)
+		{
+			koopas->SetState(KOOPAS_STATE_IDLE);
+			y -= 6;
+			vy = -MARIO_JUMP_DEFLECT_SPEED;
+			return;
+		}
+	}
+	if (koopas->GetState() == KOOPAS_STATE_IDLE) {
+		if (e->nx < 0) {
+			koopas->SpinLeft();
+		}
+		else koopas->SpinRight();
+	}
+	else // hit by Koopas
+	{
+		if (untouchable == 0)
+		{
+			if (koopas->GetState() != KOOPAS_STATE_IDLE)
+			{
+				if (level > MARIO_LEVEL_SMALL)
+				{
+					level = MARIO_LEVEL_SMALL;
+					StartUntouchable();
+				}
+				else
+				{
+					DebugOut(L">>> Mario DIE >>> \n");
+					SetState(MARIO_STATE_DIE);
+				}
+			}
+		}
+	}
+}
+void CMario::OnCollisionWithWingGoomba(LPCOLLISIONEVENT e)
+{
+	CWingGoomba* winggoomba = dynamic_cast<CWingGoomba*>(e->obj);
+
+	// jump on top >> kill WingGoomba and deflect a bit 
+	if (e->ny < 0)
+	{
+		winggoomba->SetState(WINGGOOMBA_STATE_DIE);
+		vy = -MARIO_JUMP_DEFLECT_SPEED;
+	}
+	else // hit by WingGoomba
+	{
+		if (untouchable == 0)
+		{
+			if (level > MARIO_LEVEL_SMALL)
+			{
+				level = MARIO_LEVEL_SMALL;
+				StartUntouchable();
+			}
+			else
+			{
+				DebugOut(L">>> Mario DIE >>> \n");
+				SetState(MARIO_STATE_DIE);
+			}
+		}
 	}
 }
 

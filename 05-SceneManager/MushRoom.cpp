@@ -10,7 +10,7 @@ void CMushRoom::Render()
 {
 	CAnimations* animations = CAnimations::GetInstance();
 	animations->Get(ID_ANI_MUSHROOM)->Render(x, y);
-	RenderBoundingBox();
+	//RenderBoundingBox();
 	if (!setAppear) {
 		start = GetTickCount64();
 		setAppear = true;

@@ -24,7 +24,7 @@
     <ProjectGuid>{30b52332-21ee-43b1-91bf-b2494c04c34f}</ProjectGuid>
     <RootNamespace>My05SceneManager</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Mario</ProjectName>
+    <ProjectName>Project1</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -161,10 +161,12 @@
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Goomba.cpp" />
     <ClCompile Include="Ground.cpp" />
+    <ClCompile Include="Koopas.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mario.cpp" />
     <ClCompile Include="MushRoom.cpp" />
     <ClCompile Include="MysteryBox.cpp" />
+    <ClCompile Include="PakkunFlower.cpp" />
     <ClCompile Include="PipeAbove.cpp" />
     <ClCompile Include="PipeBelow.cpp" />
     <ClCompile Include="Platform.cpp" />
@@ -191,6 +193,8 @@
     <ClCompile Include="Tree4.cpp" />
     <ClCompile Include="Utils.cpp" />
     <ClCompile Include="WarpPipe.cpp" />
+    <ClCompile Include="WingGoomba.cpp" />
+    <ClCompile Include="WingKoopas.cpp" />
     <ClCompile Include="Wood.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -211,9 +215,11 @@
     <ClInclude Include="Goomba.h" />
     <ClInclude Include="Ground.h" />
     <ClInclude Include="KeyEventHandler.h" />
+    <ClInclude Include="Koopas.h" />
     <ClInclude Include="Mario.h" />
     <ClInclude Include="MushRoom.h" />
     <ClInclude Include="MysteryBox.h" />
+    <ClInclude Include="PakkunFlower.h" />
     <ClInclude Include="PipeAbove.h" />
     <ClInclude Include="PipeBelow.h" />
     <ClInclude Include="Platform.h" />
@@ -242,6 +248,8 @@
     <ClInclude Include="Tree4.h" />
     <ClInclude Include="Utils.h" />
     <ClInclude Include="WarpPipe.h" />
+    <ClInclude Include="WingGoomba.h" />
+    <ClInclude Include="WingKoopas.h" />
     <ClInclude Include="Wood.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
