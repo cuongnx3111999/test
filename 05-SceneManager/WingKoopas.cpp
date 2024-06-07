@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 #include "Koopas.h"
 #include "WingKoopas.h"
 #include "Goomba.h"
@@ -9,7 +7,7 @@ CWingKoopas::CWingKoopas(float x, float y) :CGameObject(x, y)
 {
 	this->ax = 0;
 	this->ay = WINGKOOPAS_GRAVITY;
-	vx = -KOOPAS_WALKING_SPEED;
+	vx = -WINGKOOPAS_WALKING_SPEED;
 }
 
 void CWingKoopas::GetBoundingBox(float& left, float& top, float& right, float& bottom)
@@ -22,6 +20,11 @@ void CWingKoopas::GetBoundingBox(float& left, float& top, float& right, float& b
 
 void CWingKoopas::OnNoCollision(DWORD dt)
 {
+	if (jump_timer > 2000) {
+		vy -= 0.3;
+		jump_timer = 0;
+	}
+	else jump_timer += dt;
 	x += vx * dt;
 	y += vy * dt;
 };
@@ -33,10 +36,6 @@ void CWingKoopas::OnCollisionWith(LPCOLLISIONEVENT e)
 		vy = 0;
 		//isOnPlatform = true;
 	}
-
-	if (dynamic_cast<CKoopas*>(e->obj)) return;
-	if (dynamic_cast<CGoomba*>(e->obj)) return;
-	if (dynamic_cast<CWingKoopas*>(e->obj)) return;
 	if (!e->obj->IsBlocking()) return;
 	if (e->ny != 0)
 	{
@@ -46,6 +45,9 @@ void CWingKoopas::OnCollisionWith(LPCOLLISIONEVENT e)
 	{
 		vx = -vx;
 	}
+	if (dynamic_cast<CKoopas*>(e->obj)) return;
+	if (dynamic_cast<CGoomba*>(e->obj)) return;
+	if (dynamic_cast<CWingKoopas*>(e->obj)) return;
 }
 
 void CWingKoopas::Update(DWORD dt, vector<LPGAMEOBJECT>* coObjects)
@@ -63,7 +65,8 @@ void CWingKoopas::Update(DWORD dt, vector<LPGAMEOBJECT>* coObjects)
 void CWingKoopas::Render()
 {
 	int aniId;
-	if (vx < 0) aniId = ID_ANI_WINGKOOPAS;
+	if (vx < 0) aniId = ID_ANI_WINGKOOPAS_LEFT;
+	else aniId = ID_ANI_WINGKOOPAS_RIGHT;
 	CAnimations::GetInstance()->Get(aniId)->Render(x, y);
 	//RenderBoundingBox();
 }
@@ -73,9 +76,8 @@ void CWingKoopas::SetState(int state)
 	CGameObject::SetState(state);
 	if (state == WINGKOOPAS_STATE_DIE) {
 		subObject = new CKoopas(x, y);
-		subObject->SetPosition(x, y + 4);
+		subObject->SetPosition(x, y - 10);
 		CreateSubObject = true;
 		timer = GetTickCount64();
 	}
 }
->>>>>>> parent of d28a2ef (add intro scene and pakkun1 files)

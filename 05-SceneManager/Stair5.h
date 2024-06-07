@@ -7,7 +7,7 @@
 #define ID_ANI_STAIR5 25000
 #define STAIR5_WIDTH 64
 #define STAIR5_BBOX_WIDTH 64
-#define STAIR5_BBOX_HEIGHT 112
+#define STAIR5_BBOX_HEIGHT 111
 
 class CStair5 : public CGameObject {
 public:

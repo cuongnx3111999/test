@@ -7,7 +7,7 @@
 #define ID_ANI_STAIR2 22000
 #define STAIR2_WIDTH 80
 #define STAIR2_BBOX_WIDTH 80
-#define STAIR2_BBOX_HEIGHT 48
+#define STAIR2_BBOX_HEIGHT 47
 
 class CStair2 : public CGameObject {
 public:

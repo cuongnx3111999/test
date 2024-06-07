@@ -17,7 +17,7 @@ void CPakkun2::Update(DWORD dt, vector<LPGAMEOBJECT>* coObjects)
 	if (risetime < 2000) {
 		Rise();
 	}
-	else if (risetime < 8000) {
+	else if (risetime < 7000) {
 		Fall();
 	}
 	else risetime = 0;
@@ -49,15 +49,14 @@ void CPakkun2::Rise() {
 		vy = 0;
 	}
 	else
-		vy = -0.018f;
+		vy = -0.016f;
 }
 void CPakkun2::Fall() {
-	if (y > y0 + 6)
+	if (y > y0)
 	{
 		vy = 0;
-		y = y0 + 6;
+		y = y0;
 	}
 	else
-		vy = 0.018f;
+		vy = 0.016f;
 }
-

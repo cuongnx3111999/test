@@ -50,6 +50,7 @@ void CGoomba::OnCollisionWith(LPCOLLISIONEVENT e)
 
 void CGoomba::Update(DWORD dt, vector<LPGAMEOBJECT> *coObjects)
 {
+	if (y > 250) this->Delete();
 	vy += ay * dt;
 	vx += ax * dt;
 
@@ -90,6 +91,10 @@ void CGoomba::SetState(int state)
 			break;
 		case GOOMBA_STATE_WALKING: 
 			vx = -GOOMBA_WALKING_SPEED;
+			break;
+		case GOOMBA_STATE_DIE_2:;
+			y += 10;
+			vy = 0.05f;
 			break;
 	}
 }

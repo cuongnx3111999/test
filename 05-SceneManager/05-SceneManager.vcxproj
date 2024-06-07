@@ -156,7 +156,9 @@
     <ClCompile Include="Coin.cpp" />
     <ClCompile Include="CoinFromBox.cpp" />
     <ClCompile Include="Collision.cpp" />
+    <ClCompile Include="Curtain.cpp" />
     <ClCompile Include="debug.cpp" />
+    <ClCompile Include="fireball.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Goomba.cpp" />
@@ -166,7 +168,9 @@
     <ClCompile Include="Mario.cpp" />
     <ClCompile Include="MushRoom.cpp" />
     <ClCompile Include="MysteryBox.cpp" />
-    <ClCompile Include="PakkunFlower.cpp" />
+    <ClCompile Include="PakkunFlower1.cpp" />
+    <ClCompile Include="PakkunFlower2.cpp" />
+    <ClCompile Include="PakkunFlower3.cpp" />
     <ClCompile Include="PipeAbove.cpp" />
     <ClCompile Include="PipeBelow.cpp" />
     <ClCompile Include="Platform.cpp" />
@@ -187,6 +191,7 @@
     <ClCompile Include="Stair8.cpp" />
     <ClCompile Include="Stair9.cpp" />
     <ClCompile Include="Textures.cpp" />
+    <ClCompile Include="Title.cpp" />
     <ClCompile Include="Tree1.cpp" />
     <ClCompile Include="Tree2.cpp" />
     <ClCompile Include="Tree3.cpp" />
@@ -209,7 +214,9 @@
     <ClInclude Include="Coin.h" />
     <ClInclude Include="CoinFromBox.h" />
     <ClInclude Include="Collision.h" />
+    <ClInclude Include="Curtain.h" />
     <ClInclude Include="debug.h" />
+    <ClInclude Include="fireball.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Goomba.h" />
@@ -219,7 +226,9 @@
     <ClInclude Include="Mario.h" />
     <ClInclude Include="MushRoom.h" />
     <ClInclude Include="MysteryBox.h" />
-    <ClInclude Include="PakkunFlower.h" />
+    <ClInclude Include="PakkunFlower1.h" />
+    <ClInclude Include="PakkunFlower2.h" />
+    <ClInclude Include="PakkunFlower3.h" />
     <ClInclude Include="PipeAbove.h" />
     <ClInclude Include="PipeBelow.h" />
     <ClInclude Include="Platform.h" />
@@ -242,6 +251,7 @@
     <ClInclude Include="Stair9.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Textures.h" />
+    <ClInclude Include="Title.h" />
     <ClInclude Include="Tree1.h" />
     <ClInclude Include="Tree2.h" />
     <ClInclude Include="Tree3.h" />

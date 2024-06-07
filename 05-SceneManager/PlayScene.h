@@ -34,8 +34,12 @@
 #include "Koopas.h"
 #include "WingGoomba.h"
 #include "WingKoopas.h"
-#include "PakkunFlower.h"
-//#include "Koopas.h"
+#include "Curtain.h"
+#include "Title.h"
+#include "PakkunFlower1.h"
+#include "PakkunFlower2.h"
+#include "PakkunFlower3.h"
+//#include "PakkunFlower1.h"
 
 
 class CPlayScene: public CScene

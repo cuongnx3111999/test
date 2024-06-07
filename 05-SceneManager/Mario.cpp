@@ -12,12 +12,14 @@
 #include "Koopas.h"
 #include "WingGoomba.h"
 #include "WingKoopas.h"
-#include "PakkunFlower.h"
+#include "PakkunFlower1.h"
 
 #include "Collision.h"
 
 void CMario::Update(DWORD dt, vector<LPGAMEOBJECT> *coObjects)
 {
+	CGame::GetInstance()->GetCurrentScene()->xMario = x;
+	CGame::GetInstance()->GetCurrentScene()->yMario = y;
 	vy += ay * dt;
 	vx += ax * dt;
 
@@ -74,6 +76,8 @@ void CMario::OnCollisionWith(LPCOLLISIONEVENT e)
 		OnCollisionWithKoopas(e);
 	else if (dynamic_cast<CWingGoomba*>(e->obj))
 		OnCollisionWithWingGoomba(e);
+	else if (dynamic_cast<CWingKoopas*>(e->obj))
+		OnCollisionWithWingKoopas(e);
 }
 
 void CMario::OnCollisionWithGoomba(LPCOLLISIONEVENT e)
@@ -144,85 +148,14 @@ void CMario::OnCollisionWithMushRoom(LPCOLLISIONEVENT e)
 void CMario::OnCollisionWithKoopas(LPCOLLISIONEVENT e)
 {
 	CKoopas* koopas = dynamic_cast<CKoopas*>(e->obj);
-	if (e->ny < 0)
+	if (koopas->GetState() == KOOPAS_STATE_WALKING) 
 	{
-		if (koopas->GetState() == KOOPAS_STATE_WALKING)
+		if (e->ny < 0) 
 		{
 			koopas->SetState(KOOPAS_STATE_IDLE);
-			y -= 6;
+			y -= 10;
 			vy = -MARIO_JUMP_DEFLECT_SPEED;
 			return;
-		}
-	}
-	if (koopas->GetState() == KOOPAS_STATE_IDLE) {
-		if (e->nx < 0) {
-			koopas->SpinLeft();
-		}
-		else koopas->SpinRight();
-	}
-	else // hit by Koopas
-	{
-		if (untouchable == 0)
-		{
-			if (koopas->GetState() != KOOPAS_STATE_IDLE)
-			{
-				if (level > MARIO_LEVEL_SMALL)
-				{
-					level = MARIO_LEVEL_SMALL;
-					StartUntouchable();
-				}
-				else
-				{
-					DebugOut(L">>> Mario DIE >>> \n");
-					SetState(MARIO_STATE_DIE);
-				}
-			}
-		}
-	}
-	/*if (e->ny < 0)
-	{
-		if (koopas->GetState() == KOOPAS_STATE_WALKING)
-		{
-			koopas->SetState(KOOPAS_STATE_IDLE);
-			y -= 6;
-			vy = -MARIO_JUMP_DEFLECT_SPEED;
-			return;
-		}
-		if (koopas->GetState() == KOOPAS_STATE_IDLE) {
-			if (e->nx < 0) {
-				koopas->SetState(KOOPAS_STATE_SPINNING);
-				koopas->SpinLeft();
-			}
-			else if (e->nx >=0) {
-				koopas->SpinRight();
-				koopas->SetState(KOOPAS_STATE_SPINNING);
-			}
-		}
-		else if (untouchable == 0)
-		{
-			if (level > MARIO_LEVEL_SMALL)
-			{
-				level = MARIO_LEVEL_SMALL;
-				StartUntouchable();
-			}
-			else
-			{
-				DebugOut(L">>> Mario DIE >>> \n");
-				SetState(MARIO_STATE_DIE);
-			}
-		}
-	}
-	else // hit by Koopas
-	{
-		if (koopas->GetState() == KOOPAS_STATE_IDLE) {
-			if (e->nx < 0) {
-				koopas->SpinLeft();
-				koopas->SetState(KOOPAS_STATE_SPINNING);
-			}
-			else if (e->nx >= 0) {
-				koopas->SpinRight();
-				koopas->SetState(KOOPAS_STATE_SPINNING);
-			}
 		} 
 		else if (untouchable == 0)
 		{
@@ -237,10 +170,37 @@ void CMario::OnCollisionWithKoopas(LPCOLLISIONEVENT e)
 				SetState(MARIO_STATE_DIE);
 			}
 		}
-	}*/
+	}
+	else if (koopas->GetState() == KOOPAS_STATE_IDLE)
+	{
+		if (e->nx < 0) {
+			y -= 10;
+			koopas->SetState(KOOPAS_STATE_SPINNING);
+			koopas->SpinLeft();
+		}
+		else {
+			y -= 10;
+			koopas->SetState(KOOPAS_STATE_SPINNING);
+			koopas->SpinRight();
+		}
+	}
+	else
+	{
+		if (untouchable == 0)
+		{
+			if (level > MARIO_LEVEL_SMALL)
+			{
+				level = MARIO_LEVEL_SMALL;
+				StartUntouchable();
+			}
+			else
+			{
+				DebugOut(L">>> Mario DIE >>> \n");
+				SetState(MARIO_STATE_DIE);
+			}
+		}
+	}
 }
-<<<<<<< HEAD
-=======
 void CMario::OnCollisionWithWingGoomba(LPCOLLISIONEVENT e)
 {
 	CWingGoomba* winggoomba = dynamic_cast<CWingGoomba*>(e->obj);
@@ -268,7 +228,31 @@ void CMario::OnCollisionWithWingGoomba(LPCOLLISIONEVENT e)
 		}
 	}
 }
->>>>>>> parent of d28a2ef (add intro scene and pakkun1 files)
+void CMario::OnCollisionWithWingKoopas(LPCOLLISIONEVENT e)
+{
+	CWingKoopas* wingkoopas = dynamic_cast<CWingKoopas*>(e->obj);
+	if (e->ny < 0)
+	{
+		wingkoopas->SetState(WINGKOOPAS_STATE_DIE);
+		vy = -MARIO_JUMP_DEFLECT_SPEED;
+	}
+	else // hit by WingKoopas
+	{
+		if (untouchable == 0)
+		{
+			if (level > MARIO_LEVEL_SMALL)
+			{
+				level = MARIO_LEVEL_SMALL;
+				StartUntouchable();
+			}
+			else
+			{
+				DebugOut(L">>> Mario DIE >>> \n");
+				SetState(MARIO_STATE_DIE);
+			}
+		}
+	}
+}
 
 //
 // Get animation ID for small Mario

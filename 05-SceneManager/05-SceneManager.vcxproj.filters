@@ -25,6 +25,12 @@
     <Filter Include="Source Files\Stairs">
       <UniqueIdentifier>{3d50892c-57e4-44dd-958e-03a5c3a543d4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\FirstSceneObject">
+      <UniqueIdentifier>{95953e54-4890-46b5-9e1e-d4d9f9690870}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FirstSceneObject">
+      <UniqueIdentifier>{cee9dee5-6700-44d5-a24c-d71ad9a30b49}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -174,7 +180,22 @@
     <ClCompile Include="WingKoopas.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PakkunFlower.cpp">
+    <ClCompile Include="PakkunFlower1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PakkunFlower2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PakkunFlower3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Curtain.cpp">
+      <Filter>Source Files\FirstSceneObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Title.cpp">
+      <Filter>Source Files\FirstSceneObject</Filter>
+    </ClCompile>
+    <ClCompile Include="fireball.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -335,7 +356,22 @@
     <ClInclude Include="WingKoopas.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PakkunFlower.h">
+    <ClInclude Include="PakkunFlower1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PakkunFlower2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PakkunFlower3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Curtain.h">
+      <Filter>Header Files\FirstSceneObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Title.h">
+      <Filter>Header Files\FirstSceneObject</Filter>
+    </ClInclude>
+    <ClInclude Include="fireball.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
