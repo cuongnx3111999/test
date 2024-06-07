@@ -179,7 +179,68 @@ void CMario::OnCollisionWithKoopas(LPCOLLISIONEVENT e)
 			}
 		}
 	}
+	/*if (e->ny < 0)
+	{
+		if (koopas->GetState() == KOOPAS_STATE_WALKING)
+		{
+			koopas->SetState(KOOPAS_STATE_IDLE);
+			y -= 6;
+			vy = -MARIO_JUMP_DEFLECT_SPEED;
+			return;
+		}
+		if (koopas->GetState() == KOOPAS_STATE_IDLE) {
+			if (e->nx < 0) {
+				koopas->SetState(KOOPAS_STATE_SPINNING);
+				koopas->SpinLeft();
+			}
+			else if (e->nx >=0) {
+				koopas->SpinRight();
+				koopas->SetState(KOOPAS_STATE_SPINNING);
+			}
+		}
+		else if (untouchable == 0)
+		{
+			if (level > MARIO_LEVEL_SMALL)
+			{
+				level = MARIO_LEVEL_SMALL;
+				StartUntouchable();
+			}
+			else
+			{
+				DebugOut(L">>> Mario DIE >>> \n");
+				SetState(MARIO_STATE_DIE);
+			}
+		}
+	}
+	else // hit by Koopas
+	{
+		if (koopas->GetState() == KOOPAS_STATE_IDLE) {
+			if (e->nx < 0) {
+				koopas->SpinLeft();
+				koopas->SetState(KOOPAS_STATE_SPINNING);
+			}
+			else if (e->nx >= 0) {
+				koopas->SpinRight();
+				koopas->SetState(KOOPAS_STATE_SPINNING);
+			}
+		} 
+		else if (untouchable == 0)
+		{
+			if (level > MARIO_LEVEL_SMALL)
+			{
+				level = MARIO_LEVEL_SMALL;
+				StartUntouchable();
+			}
+			else
+			{
+				DebugOut(L">>> Mario DIE >>> \n");
+				SetState(MARIO_STATE_DIE);
+			}
+		}
+	}*/
 }
+<<<<<<< HEAD
+=======
 void CMario::OnCollisionWithWingGoomba(LPCOLLISIONEVENT e)
 {
 	CWingGoomba* winggoomba = dynamic_cast<CWingGoomba*>(e->obj);
@@ -207,6 +268,7 @@ void CMario::OnCollisionWithWingGoomba(LPCOLLISIONEVENT e)
 		}
 	}
 }
+>>>>>>> parent of d28a2ef (add intro scene and pakkun1 files)
 
 //
 // Get animation ID for small Mario

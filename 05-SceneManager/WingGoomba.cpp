@@ -18,6 +18,14 @@ void CWingGoomba::GetBoundingBox(float& left, float& top, float& right, float& b
 
 void CWingGoomba::OnNoCollision(DWORD dt)
 {
+<<<<<<< HEAD
+=======
+	if (jump_timer > 2000) {
+		vy -= 0.4;
+		jump_timer = 0;
+	}
+	else jump_timer += dt;
+>>>>>>> parent of d28a2ef (add intro scene and pakkun1 files)
 	x += vx * dt;
 	y += vy * dt;
 };
