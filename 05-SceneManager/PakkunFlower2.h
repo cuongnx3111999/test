@@ -2,7 +2,7 @@
 #include "GameObject.h"
 
 #define PAKKUN2_BBOX_WIDTH 16
-#define PAKKUN2_BBOX_HEIGHT 24
+#define PAKKUN2_BBOX_HEIGHT 20
 
 #define ID_ANI_PAKKUN2 42000
 

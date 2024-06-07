@@ -123,6 +123,7 @@ class CMario : public CGameObject
 	void OnCollisionWithKoopas(LPCOLLISIONEVENT e);
 	void OnCollisionWithWingGoomba(LPCOLLISIONEVENT e);
 	void OnCollisionWithWingKoopas(LPCOLLISIONEVENT e);
+	void LoseLife(LPCOLLISIONEVENT e = NULL);
 
 
 	int GetAniIdBig();
